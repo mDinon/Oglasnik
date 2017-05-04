@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Oglasnik.Model.Ad>
+
+@{
+    ViewBag.Title = "Moji oglasi";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Dodaj novi", "Create", new { area = "Profile"}, new { @class = "btn btn-default"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Currency.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsNew)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Currency.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @if (item.IsNew)
+            {
+                <span name="IsNew">Novo</span>
+            }
+            else
+            {
+                <span name="IsNew">Rabljeno</span>
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.ActionLink("Izmjeni", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detalji", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Briši", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

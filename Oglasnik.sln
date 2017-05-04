@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oglasnik.Web", "Oglasnik.Web\Oglasnik.Web.csproj", "{A6AA8397-0950-4F15-9324-9655EAD1FA43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oglasnik.DAL", "Oglasnik.DAL\Oglasnik.DAL.csproj", "{1DE54084-4414-4F45-A508-294790D74CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oglasnik.Model", "Oglasnik.Model\Oglasnik.Model.csproj", "{DA91E603-F016-491F-AC88-56B770D84E55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6AA8397-0950-4F15-9324-9655EAD1FA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6AA8397-0950-4F15-9324-9655EAD1FA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6AA8397-0950-4F15-9324-9655EAD1FA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6AA8397-0950-4F15-9324-9655EAD1FA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE54084-4414-4F45-A508-294790D74CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE54084-4414-4F45-A508-294790D74CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE54084-4414-4F45-A508-294790D74CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE54084-4414-4F45-A508-294790D74CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA91E603-F016-491F-AC88-56B770D84E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA91E603-F016-491F-AC88-56B770D84E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA91E603-F016-491F-AC88-56B770D84E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA91E603-F016-491F-AC88-56B770D84E55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

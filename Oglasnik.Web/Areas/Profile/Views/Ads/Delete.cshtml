@@ -1,0 +1,70 @@
+﻿@model Oglasnik.Model.Ad
+
+@{
+    ViewBag.Title = "Brisanje";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Jeste li sigurni da želite obrisati oglas?</h3>
+<div>
+    <h4>Oglas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Currency.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Currency.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNew)
+        </dt>
+
+        <dd>
+            @if (Model.IsNew)
+            {
+                <span name="IsNew">Novo</span>
+            }
+            else
+            {
+                <span name="IsNew">Rabljeno</span>
+            }
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Briši" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@model Oglasnik.Model.Ad
+
+@{
+    ViewBag.Title = "Izmjena";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("_CreateOrEdit")
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

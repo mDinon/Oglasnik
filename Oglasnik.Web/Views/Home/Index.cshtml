@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Oglasnik.Model.Ad>
+
+@{
+    ViewBag.Title = "Popis oglasa";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@Html.Partial("_OglasiFilter", new Oglasnik.Web.Models.AdFilterModel())
+<div id="oglasiDiv">
+    @Html.Partial("_IndexTable")
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $(".ads-filter .submit-button").on("click", function () {
+                $.ajax({
+                    url: '@Url.Action("IndexAjax")',
+                    method: "POST",
+                    data: $(this).closest('form').serialize(),
+                    success: function (data) {
+                        $("#tableAds").replaceWith(data);
+                    }
+                });
+            });
+        });
+    </script>
+    }

@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Oglasnik.DAL/bin/Debug
+/Oglasnik.DAL/obj/Debug
+/Oglasnik.Model/bin/Debug
+/Oglasnik.Model/obj/Debug
+/Oglasnik.Web/bin
+/Oglasnik.Web/obj/Debug
+/Oglasnik.Web/Web.Debug.config
+/Oglasnik.Web/Web.Release.config
+/packages
+/.vs/config

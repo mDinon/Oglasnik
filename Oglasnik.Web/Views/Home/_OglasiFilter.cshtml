@@ -1,0 +1,11 @@
+﻿﻿﻿@model Oglasnik.Web.Models.AdFilterModel
+<div class="row">
+    <div class="col-md-12">
+        <form action="@Url.Action("IndexAjax")" method="post" class="form-inline ads-filter">
+            <div class="form-group">
+                @Html.EditorFor(model => model.Kategorija, new { htmlAttributes = new { @class = "form-control", placeholder = "Pretraga po kategoriji" } })
+            </div>
+            <button type="button" class="btn btn-default submit-button">Pretraga</button>
+        </form>
+    </div>
+</div>
